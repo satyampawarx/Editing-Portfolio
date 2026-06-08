@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Satyam Pawar – Video Editor, Motion Graphics Designer & Creative Developer. Transforming ideas into engaging visual stories." />
+  <meta name="keywords" content="video editor, motion graphics, reels, cinematic, after effects, premiere pro, Satyam Pawar" />
+  <meta name="author" content="Satyam Pawar" />
+  <meta property="og:title" content="Satyam Pawar | Video Editor & Motion Graphics Designer" />
+  <meta property="og:description" content="Transforming ideas into engaging visual stories." />
+  <meta property="og:type" content="website" />
+  <title>Satyam Pawar | Video Editor & Motion Graphics Designer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════ LOADER ═══════════════════════ -->
+  <div id="loader" class="loader">
+    <div class="loader__inner">
+      <div class="loader__bar"></div>
+      <span class="loader__text">Loading</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════ CUSTOM CURSOR ═══════════════════════ -->
+  <div id="cursor" class="cursor"></div>
+  <div id="cursor-trail" class="cursor-trail"></div>
+
+  <!-- ═══════════════════════ NAVBAR ═══════════════════════ -->
+  <nav id="navbar" class="navbar">
+    <a href="#home" class="navbar__logo">SP<span>.</span></a>
+    <ul class="navbar__links">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#work" class="nav-link">Work</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <a href="#contact" class="navbar__cta btn-primary">Let's Talk</a>
+    <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobile-nav">
+    <ul>
+      <li><a href="#home" class="mobile-nav__link">Home</a></li>
+      <li><a href="#work" class="mobile-nav__link">Work</a></li>
+      <li><a href="#about" class="mobile-nav__link">About</a></li>
+      <li><a href="#services" class="mobile-nav__link">Services</a></li>
+      <li><a href="#contact" class="mobile-nav__link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════ HERO ═══════════════════════ -->
+  <section id="home" class="hero">
+    <!-- Video BG placeholder — drop your MP4 into assets/videos/hero.mp4 -->
+    <div class="hero__video-bg">
+      <video autoplay muted loop playsinline id="hero-video">
+        <source src="assets/videos/hero.mp4" type="video/mp4" />
+      </video>
+      <div class="hero__video-overlay"></div>
+    </div>
+
+    <!-- Grain texture -->
+    <div class="hero__grain"></div>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow reveal">Creative Portfolio</p>
+      <h1 class="hero__name reveal">
+        <span class="hero__name-first">Satyam</span>
+        <span class="hero__name-last">Pawar</span>
+      </h1>
+      <p class="hero__title reveal">
+        Video Editor &nbsp;/&nbsp; Motion Graphics Designer &nbsp;/&nbsp; Creative Developer
+      </p>
+      <p class="hero__tagline reveal">
+        Transforming ideas into engaging visual stories.
+      </p>
+      <div class="hero__ctas reveal">
+        <a href="#work" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-ghost">Contact Me</a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero__scroll-indicator">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"><div class="hero__scroll-dot"></div></div>
+    </div>
+
+    <!-- Floating labels -->
+    <div class="hero__float hero__float--tl">After Effects</div>
+    <div class="hero__float hero__float--br">Premiere Pro</div>
+  </section>
+
+  <!-- ═══════════════════════ FEATURED WORK ═══════════════════════ -->
+  <section id="work" class="section work">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Portfolio</p>
+        <h2 class="section-title">Featured <span>Work</span></h2>
+        <p class="section-sub">A curated selection of video projects across formats and genres.</p>
+      </div>
+
+      <!-- Filters -->
+      <div class="work__filters reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="reels">Reels</button>
+        <button class="filter-btn" data-filter="spiritual">Spiritual</button>
+        <button class="filter-btn" data-filter="motivational">Motivational</button>
+        <button class="filter-btn" data-filter="motion">Motion Graphics</button>
+        <button class="filter-btn" data-filter="cinematic">Cinematic</button>
+      </div>
+
+      <!-- Grid -->
+      <div class="work__grid" id="portfolio-grid">
+
+        <!-- Card 1 -->
+        <div class="work-card reveal" data-category="reels">
+          <div class="work-card__thumb">
+            <iframe src="https://www.youtube.com/embed/8_YYCka7hR4" title="Reel 01" allowfullscreen loading="lazy"></iframe>
+            <div class="work-card__overlay">
+              <button class="play-btn" data-video="https://www.youtube.com/embed/8_YYCka7hR4" data-title="Viral Reel – Brand Story">
+                <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="work-card__info">
+            <span class="work-card__cat">Reels</span>
+            <h3 class="work-card__title">Viral Brand Story Reel</h3>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="work-card reveal" data-category="spiritual">
+          <div class="work-card__thumb">
+            <iframe src="https://www.youtube.com/embed/vKswwGsuUoo" title="Spiritual 01" allowfullscreen loading="lazy"></iframe>
+            <div class="work-card__overlay">
+              <button class="play-btn" data-video="https://www.youtube.com/embed/vKswwGsuUoo?autoplay=1" data-title="K.Y.K – Actionable Karma">
+                <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="work-card__info">
+            <span class="work-card__cat">Spiritual</span>
+            <h3 class="work-card__title">Sirshree Edit</h3>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="work-card reveal" data-category="motivational">
+          <div class="work-card__thumb">
+            <iframe src="https://www.youtube.com/embed/A09Gb4YN0Ns" title="Motivational 01" allowfullscreen loading="lazy"></iframe>
+            <div class="work-card__overlay">
+              <button class="play-btn" data-video="https://www.youtube.com/embed/A09Gb4YN0Ns?autoplay=1" data-title="Rise Up – Motivational Edit">
+                <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="work-card__info">
+            <span class="work-card__cat">Health & Wellness
+            </span>
+            <h3 class="work-card__title">Health - Yoga</h3>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="work-card reveal" data-category="motion">
+          <div class="work-card__thumb">
+            <iframe src="https://www.youtube.com/embed/LXb3EKWsInQ?rel=0" title="Motion 01" allowfullscreen loading="lazy"></iframe>
+            <div class="work-card__overlay">
+              <button class="play-btn" data-video="https://www.youtube.com/embed/LXb3EKWsInQ?autoplay=1" data-title="Kinetic Typography Motion">
+                <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="work-card__info">
+            <span class="work-card__cat">Motion Graphics</span>
+            <h3 class="work-card__title">Kinetic Typography Motion</h3>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="work-card reveal" data-category="cinematic">
+          <div class="work-card__thumb">
+            <iframe src="https://www.youtube.com/embed/ysz5S6PUM-U?rel=0" title="Cinematic 01" allowfullscreen loading="lazy"></iframe>
+            <div class="work-card__overlay">
+              <button class="play-btn" data-video="https://www.youtube.com/embed/ysz5S6PUM-U?autoplay=1" data-title="Golden Hour Cinematic Edit">
+                <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="work-card__info">
+            <span class="work-card__cat">Cinematic</span>
+            <h3 class="work-card__title">Golden Hour Cinematic Edit</h3>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="work-card reveal" data-category="reels">
+          <div class="work-card__thumb">
+            <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?rel=0" title="Reel 02" allowfullscreen loading="lazy"></iframe>
+            <div class="work-card__overlay">
+              <button class="play-btn" data-video="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1" data-title="Instagram Reel – Startup">
+                <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="work-card__info">
+            <span class="work-card__cat">Reels</span>
+            <h3 class="work-card__title">Instagram Reel – Startup</h3>
+          </div>
+        </div>
+
+      </div><!-- /work__grid -->
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ SHOWREEL ═══════════════════════ -->
+  <section class="section showreel">
+    <div class="showreel__bg-text">SHOWREEL</div>
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Highlight Reel</p>
+        <h2 class="section-title">The <span>Showreel</span></h2>
+      </div>
+      <div class="showreel__player reveal">
+        <div class="showreel__frame" id="showreel-frame">
+          <iframe id="showreel-iframe" src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0" title="Showreel 2024" allowfullscreen loading="lazy"></iframe>
+          <!-- Big play overlay before play -->
+          <div class="showreel__play-overlay" id="showreel-overlay">
+            <button class="showreel__play-btn" id="showreel-play-btn">
+              <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="none" stroke="rgba(139,92,246,0.6)" stroke-width="2"/><polygon points="38,28 72,50 38,72" fill="#8b5cf6"/></svg>
+              <span>Watch Showreel</span>
+            </button>
+          </div>
+        </div>
+        <div class="showreel__meta">
+          <p>2024 Showreel</p>
+          <span>3:24</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ STATS ═══════════════════════ -->
+  <section class="section stats">
+    <div class="container">
+      <div class="stats__grid">
+        <div class="stat-card reveal">
+          <span class="stat-card__num" data-target="100">0</span><span class="stat-card__plus">+</span>
+          <p class="stat-card__label">Videos Edited</p>
+        </div>
+        <div class="stat-card reveal">
+          <span class="stat-card__num" data-target="1">0</span><span class="stat-card__unit">M+</span>
+          <p class="stat-card__label">Total Views</p>
+        </div>
+        <div class="stat-card reveal">
+          <span class="stat-card__num" data-target="3">0</span><span class="stat-card__plus">+</span>
+          <p class="stat-card__label">Years Experience</p>
+        </div>
+        <div class="stat-card reveal">
+          <span class="stat-card__num" data-target="20">0</span><span class="stat-card__plus">+</span>
+          <p class="stat-card__label">Happy Clients</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ SERVICES ═══════════════════════ -->
+  <section id="services" class="section services">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">What I Do</p>
+        <h2 class="section-title">My <span>Services</span></h2>
+        <p class="section-sub">End-to-end creative production tailored to your brand's voice.</p>
+      </div>
+
+      <div class="services__grid">
+
+        <div class="service-card reveal">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 10l4.553-2.069A1 1 0 0121 8.845v6.31a1 1 0 01-1.447.894L15 14"/><rect x="3" y="6" width="12" height="12" rx="2"/></svg>
+          </div>
+          <h3>Video Editing</h3>
+          <p>Precision cuts, colour grading, sound design, and polished exports for any platform.</p>
+          <div class="service-card__tag">Core Service</div>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>Motion Graphics</h3>
+          <p>Kinetic typography, 2D animation, and custom graphic elements that elevate storytelling.</p>
+          <div class="service-card__tag">AE Powered</div>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>Social Media Content</h3>
+          <p>Platform-optimised content for Instagram, YouTube Shorts, and TikTok that drives engagement.</p>
+          <div class="service-card__tag">Trending</div>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+          </div>
+          <h3>YouTube Editing</h3>
+          <p>Full long-form YouTube production – thumbnails, chapters, captions, and retention-boosting edits.</p>
+          <div class="service-card__tag">Long Form</div>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a3 3 0 013 3v7a3 3 0 01-6 0V5a3 3 0 013-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2M12 19v3M8 22h8"/></svg>
+          </div>
+          <h3>Short Form Content</h3>
+          <p>Hook-driven reels and shorts engineered for virality – fast pacing, punchy captions, music sync.</p>
+          <div class="service-card__tag">Viral Focus</div>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Brand Storytelling</h3>
+          <p>Cinematic brand films and narrative-driven content that builds trust and emotional resonance.</p>
+          <div class="service-card__tag">Premium</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ ABOUT ═══════════════════════ -->
+  <section id="about" class="section about">
+    <div class="container">
+      <div class="about__layout">
+
+        <div class="about__image-col reveal">
+          <div class="about__image-wrap">
+            <!-- Replace src with your actual photo path -->
+            <img src="assets/images/profile.jpg" alt="Satyam Pawar" class="about__img" onerror="this.style.display='none';document.getElementById('profile-placeholder').style.display='flex'" />
+            <div id="profile-placeholder" class="about__img-placeholder">
+              <span>SP</span>
+            </div>
+            <div class="about__image-border"></div>
+            <div class="about__image-glow"></div>
+          </div>
+          <div class="about__badges">
+            <div class="about__badge">🎬 Video Editor</div>
+            <div class="about__badge">✨ Motion Designer</div>
+            <div class="about__badge">💻 Creative Dev</div>
+          </div>
+        </div>
+
+        <div class="about__text-col">
+          <div class="section-header section-header--left reveal">
+            <p class="section-eyebrow">About Me</p>
+            <h2 class="section-title">The Story <span>Behind</span> the Frame</h2>
+          </div>
+          <p class="about__bio reveal">
+            Hey! I'm <strong>Satyam Pawar</strong> — a video editor, motion graphics designer, and creative developer based in Pune, India. I'm currently pursuing my B.Sc. in Computer Science at SPPU while building a career at the intersection of storytelling and technology.
+          </p>
+          <p class="about__bio reveal">
+            From cinematic reels and spiritual content to brand films and motion graphics, I craft visuals that don't just look good — they feel intentional. Every frame has a purpose.
+          </p>
+
+          <div class="about__skills reveal">
+            <h4>Skills & Tools</h4>
+            <div class="skill-bar-list">
+              <div class="skill-bar">
+                <div class="skill-bar__label"><span>Premiere Pro</span><span>92%</span></div>
+                <div class="skill-bar__track"><div class="skill-bar__fill" data-width="92"></div></div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-bar__label"><span>After Effects</span><span>87%</span></div>
+                <div class="skill-bar__track"><div class="skill-bar__fill" data-width="87"></div></div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-bar__label"><span>Photoshop</span><span>80%</span></div>
+                <div class="skill-bar__track"><div class="skill-bar__fill" data-width="80"></div></div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-bar__label"><span>Illustrator</span><span>75%</span></div>
+                <div class="skill-bar__track"><div class="skill-bar__fill" data-width="75"></div></div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-bar__label"><span>CapCut</span><span>95%</span></div>
+                <div class="skill-bar__track"><div class="skill-bar__fill" data-width="95"></div></div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-bar__label"><span>Motion Graphics</span><span>88%</span></div>
+                <div class="skill-bar__track"><div class="skill-bar__fill" data-width="88"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ TESTIMONIALS ═══════════════════════ -->
+  <section class="section testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Clients Say</p>
+        <h2 class="section-title">Kind <span>Words</span></h2>
+      </div>
+
+      <div class="testimonials__slider reveal">
+        <div class="testimonials__track" id="testi-track">
+
+          <div class="testi-card">
+            <div class="testi-card__stars">★★★★★</div>
+            <p class="testi-card__quote">"Satyam transformed our raw footage into a cinematic masterpiece. The pacing, colour grade, and music sync were absolutely on point. Would recommend to every brand."</p>
+            <div class="testi-card__author">
+              <div class="testi-card__avatar">R</div>
+              <div>
+                <strong>Rahul Sharma</strong>
+                <span>Founder, StartupX</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card">
+            <div class="testi-card__stars">★★★★★</div>
+            <p class="testi-card__quote">"Our reels went from 2K views to 200K+ after Satyam redesigned our content strategy and editing style. He understands the algorithm AND the art."</p>
+            <div class="testi-card__author">
+              <div class="testi-card__avatar">P</div>
+              <div>
+                <strong>Priya Kulkarni</strong>
+                <span>Influencer & Content Creator</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card">
+            <div class="testi-card__stars">★★★★★</div>
+            <p class="testi-card__quote">"The motion graphics he created for our product launch video were next-level. Super professional, met all deadlines, and nailed the brief perfectly."</p>
+            <div class="testi-card__author">
+              <div class="testi-card__avatar">A</div>
+              <div>
+                <strong>Aniket Deshmukh</strong>
+                <span>Marketing Head, TechVision</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card">
+            <div class="testi-card__stars">★★★★★</div>
+            <p class="testi-card__quote">"I wanted spiritual content that feels devotional yet modern. Satyam delivered beyond expectations — the glow effects and Devanagari typography were stunning."</p>
+            <div class="testi-card__author">
+              <div class="testi-card__avatar">S</div>
+              <div>
+                <strong>Sunita Joshi</strong>
+                <span>Spiritual Content Creator</span>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /track -->
+
+        <div class="testimonials__controls">
+          <button class="testi-prev" id="testi-prev" aria-label="Previous">&#8592;</button>
+          <div class="testi-dots" id="testi-dots"></div>
+          <button class="testi-next" id="testi-next" aria-label="Next">&#8594;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ CONTACT ═══════════════════════ -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Get In Touch</p>
+        <h2 class="section-title">Let's <span>Create</span> Together</h2>
+        <p class="section-sub">Ready to tell your story? Drop me a message.</p>
+      </div>
+
+      <div class="contact__layout">
+
+        <div class="contact__form-col reveal">
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="service">Service Needed</label>
+              <select id="service" name="service">
+                <option value="">Select a service…</option>
+                <option>Video Editing</option>
+                <option>Motion Graphics</option>
+                <option>Social Media Content</option>
+                <option>YouTube Editing</option>
+                <option>Short Form Content</option>
+                <option>Brand Storytelling</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary btn-full">
+              <span>Send Message</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+            <p class="form-success" id="form-success">✅ Message sent! I'll be in touch soon.</p>
+          </form>
+        </div>
+
+        <div class="contact__info-col reveal">
+          <div class="contact__info-card">
+            <h3>Contact Details</h3>
+            <ul class="contact__details">
+              <li>
+                <div class="contact__icon">✉</div>
+                <div>
+                  <span>Email</span>
+                  <a href="mailto:satyampawarx@gmail.com">satyampawarx@gmail.com</a>
+                </div>
+              </li>
+              <li>
+                <div class="contact__icon">📍</div>
+                <div>
+                  <span>Location</span>
+                  <strong>Pune, Maharashtra, India</strong>
+                </div>
+              </li>
+            </ul>
+
+            <h3 class="contact__social-title">Follow Me</h3>
+            <div class="contact__socials">
+              <a href="https://github.com/satyampawarx" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/satyampawarx" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </a>
+              <a href="https://instagram.com/satyampawarx" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </a>
+              <a href="https://wa.me/919999999999" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <a href="#home" class="footer__logo">SP<span>.</span></a>
+        <p class="footer__tagline">Transforming ideas into engaging visual stories.</p>
+        <div class="footer__socials">
+          <a href="https://github.com/satyampawarx" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/satyampawarx" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://instagram.com/satyampawarx" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="https://wa.me/919999999999" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; <span id="year"></span> Satyam Pawar. All rights reserved.</p>
+        <p>Crafted with ❤️ &amp; lots of coffee.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- ═══════════════════════ VIDEO MODAL ═══════════════════════ -->
+  <div class="modal-overlay" id="video-modal">
+    <div class="modal">
+      <button class="modal__close" id="modal-close" aria-label="Close modal">✕</button>
+      <h3 class="modal__title" id="modal-title"></h3>
+      <div class="modal__video">
+        <iframe id="modal-iframe" src="" allowfullscreen title="Video Player"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
