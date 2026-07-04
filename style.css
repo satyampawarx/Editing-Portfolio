@@ -1598,3 +1598,212 @@ body {
   .work__filters { gap: 0.4rem; }
   .filter-btn { padding: 0.4rem 0.8rem; font-size: 0.78rem; }
 }
+/* ═══════════════════════ TEEJGYAN SECTION ═══════════════════════ */
+.teejgyan-section {
+  padding: 4rem 0;
+}
+
+.teejgyan-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.03); /* Premium Glassmorphism */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 3rem 2rem;
+  border-radius: 24px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  gap: 1.5rem;
+  transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.teejgyan-banner:hover {
+  transform: translateY(-8px);
+  border-color: rgba(220, 39, 67, 0.3);
+  box-shadow: 0 15px 40px rgba(220, 39, 67, 0.15);
+}
+
+.teejgyan-logo svg {
+  filter: drop-shadow(0 4px 10px rgba(220, 39, 67, 0.4));
+  transition: transform 0.3s ease;
+}
+
+.teejgyan-banner:hover .teejgyan-logo svg {
+  transform: scale(1.1);
+}
+
+.teejgyan-content h2 {
+  margin-bottom: 0.5rem;
+}
+
+.teejgyan-content p {
+  color: var(--text-secondary, #a1a1aa);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Custom Instagram Gradient Button */
+.insta-btn {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  border: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(220, 39, 67, 0.3);
+}
+
+.insta-btn:hover {
+  background: linear-gradient(45deg, #bc1888 0%, #cc2366 25%, #dc2743 50%, #e6683c 75%, #f09433 100%);
+  box-shadow: 0 6px 20px rgba(220, 39, 67, 0.5);
+  color: #ffffff;
+}
+
+/* Desktop Layout */
+@media (min-width: 768px) {
+  .teejgyan-banner {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: 3.5rem 4rem;
+  }
+  
+  .teejgyan-content {
+    flex: 1;
+    margin: 0 2.5rem;
+  }
+  
+  .teejgyan-content p {
+    margin: 0;
+  }
+}
+/* ═══════════════════════ EDUCATION TIMELINE ═══════════════════════ */
+.education {
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+/* Vertical Line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
+
+.timeline__item {
+  position: relative;
+  padding-left: 3.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.timeline__item:last-child {
+  margin-bottom: 0;
+}
+
+/* Dots */
+.timeline__dot {
+  position: absolute;
+  left: 14px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  border: 2px solid #111; /* Match this with your background color */
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+/* Glowing dot for current education */
+.timeline__dot--active {
+  background: #8b5cf6; /* Primary purple theme color */
+  box-shadow: 0 0 12px rgba(139, 92, 246, 0.8);
+  border-color: #8b5cf6;
+}
+
+/* Content Box */
+.timeline__content {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 1.8rem;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline__content:hover {
+  transform: translateX(8px);
+  border-color: rgba(139, 92, 246, 0.4); /* Primary color border on hover */
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Typography inside timeline */
+.timeline__year {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-family: 'Space Mono', monospace;
+  color: #8b5cf6; /* Primary color */
+  margin-bottom: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: rgba(139, 92, 246, 0.1);
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.timeline__degree {
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+  color: #ffffff;
+}
+
+.timeline__uni {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--text-secondary, #a1a1aa);
+  margin-bottom: 1rem;
+}
+
+.timeline__desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #d4d4d8;
+  margin: 0;
+}
+
+.highlight-text {
+  color: #10b981; /* Emerald green for Grade A+ */
+  font-weight: 600;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 15px;
+  }
+  .timeline__dot {
+    left: 9px;
+  }
+  .timeline__item {
+    padding-left: 2.8rem;
+  }
+  .timeline__content {
+    padding: 1.2rem;
+  }
+}
