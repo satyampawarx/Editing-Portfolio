@@ -110,25 +110,37 @@
         <p class="section-sub">A curated selection of video projects across formats and genres.</p>
       </div>
 
-      <!-- Filters -->
       <div class="work__filters reveal">
         <button class="filter-btn active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="reels">Reels</button>
         <button class="filter-btn" data-filter="spiritual">Spiritual</button>
-        <button class="filter-btn" data-filter="Health">Health & Wellness</button>
-        <button class="filter-btn" data-filter="Storytelling">Storytelling</button>
+        <button class="filter-btn" data-filter="health">Health & Wellness</button>
+        <button class="filter-btn" data-filter="storytelling">Storytelling</button>
         <button class="filter-btn" data-filter="cinematic">Cinematic</button>
       </div>
 
-      <!-- Grid -->
       <div class="work__grid" id="portfolio-grid">
 
-        <!-- Card 1 -->
+        <div class="work-card reveal" data-category="spiritual">
+          <div class="work-card__thumb">
+            <img src="https://img.youtube.com/vi/vKswwGsuUoo/maxresdefault.jpg" alt="Sirshree Edit" class="video-thumbnail" />
+            <div class="work-card__overlay">
+              <button class="play-btn" data-video="https://www.youtube.com/embed/vKswwGsuUoo?autoplay=1" data-title="Sirshree: Actionable Karma">
+                <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="work-card__info">
+            <span class="work-card__cat">Spiritual</span>
+            <h3 class="work-card__title">Sirshree: Actionable Karma</h3>
+          </div>
+        </div>
+        
         <div class="work-card reveal" data-category="reels">
           <div class="work-card__thumb">
-            <iframe src="https://www.youtube.com/embed/8_YYCka7hR4" title="Reel 01" allowfullscreen loading="lazy"></iframe>
+            <img src="https://img.youtube.com/vi/8_YYCka7hR4/maxresdefault.jpg" alt="Brand Story Reel" class="video-thumbnail" />
             <div class="work-card__overlay">
-              <button class="play-btn" data-video="https://www.youtube.com/embed/8_YYCka7hR4" data-title="Viral Reel – Brand Story">
+              <button class="play-btn" data-video="https://www.youtube.com/embed/8_YYCka7hR4?autoplay=1" data-title="Viral Brand Story Reel">
                 <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
               </button>
             </div>
@@ -139,140 +151,112 @@
           </div>
         </div>
 
-        <!-- Card 2 -->
-        <div class="work-card reveal" data-category="spiritual">
+        <div class="work-card reveal" data-category="health">
           <div class="work-card__thumb">
-            <iframe src="https://www.youtube.com/embed/vKswwGsuUoo" title="Spiritual 01" allowfullscreen loading="lazy"></iframe>
+            <img src="https://img.youtube.com/vi/A09Gb4YN0Ns/maxresdefault.jpg" alt="Health & Wellness" class="video-thumbnail" />
             <div class="work-card__overlay">
-              <button class="play-btn" data-video="https://www.youtube.com/embed/vKswwGsuUoo?autoplay=1" data-title="K.Y.K – Actionable Karma">
+              <button class="play-btn" data-video="https://www.youtube.com/embed/A09Gb4YN0Ns?autoplay=1" data-title="Rise Up: Health & Wellness Motivation">
                 <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
               </button>
             </div>
           </div>
           <div class="work-card__info">
-            <span class="work-card__cat">Spiritual</span>
-            <h3 class="work-card__title">Sirshree Edit</h3>
+            <span class="work-card__cat">Health & Wellness</span>
+            <h3 class="work-card__title">Rise Up: Health & Yoga</h3>
           </div>
         </div>
 
-        <!-- Card 3 -->
-        <div class="work-card reveal" data-category="Health">
+        <div class="work-card reveal" data-category="storytelling">
           <div class="work-card__thumb">
-            <iframe src="https://www.youtube.com/embed/A09Gb4YN0Ns" title="Motivational 01" allowfullscreen loading="lazy"></iframe>
+            <img src="https://img.youtube.com/vi/T0NKIzpb8Ok/maxresdefault.jpg" alt="Storytelling" class="video-thumbnail" />
             <div class="work-card__overlay">
-              <button class="play-btn" data-video="https://www.youtube.com/embed/A09Gb4YN0Ns?autoplay=1" data-title="Rise Up – Motivational Edit">
-                <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
-              </button>
-            </div>
-          </div>
-          <div class="work-card__info">
-            <span class="work-card__cat">Health & Wellness
-            </span>
-            <h3 class="work-card__title">Health - Yoga</h3>
-          </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="work-card reveal" data-category="Storytelling">
-          <div class="work-card__thumb">
-            <iframe src="https://www.youtube.com/embed/T0NKIzpb8Ok" title="Storytelling 01" allowfullscreen loading="lazy"></iframe>
-            <div class="work-card__overlay">
-              <button class="play-btn" data-video="https://www.youtube.com/embed/T0NKIzpb8Ok?autoplay=1" data-title="Ai videos for storyteling">
+              <button class="play-btn" data-video="https://www.youtube.com/embed/T0NKIzpb8Ok?autoplay=1" data-title="AI-Driven Visual Storytelling">
                 <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
               </button>
             </div>
           </div>
           <div class="work-card__info">
             <span class="work-card__cat">Storytelling</span>
-            <h3 class="work-card__title">Ai Proper animations used - Real life</h3>
+            <h3 class="work-card__title">AI-Driven Visual Storytelling</h3>
           </div>
         </div>
 
-        <!-- Card 5 -->
-        <div class="work-card reveal" data-category="Spiritual">
+        <div class="work-card reveal" data-category="cinematic">
           <div class="work-card__thumb">
-            <iframe src="https://www.youtube.com/embed/B_BCCdWkjWA?rel=0" title="Cinematic 01" allowfullscreen loading="lazy"></iframe>
+            <img src="https://img.youtube.com/vi/B_BCCdWkjWA/maxresdefault.jpg" alt="Cinematic Motion Graphics" class="video-thumbnail" />
             <div class="work-card__overlay">
-              <button class="play-btn" data-video="https://www.youtube.com/embed/B_BCCdWkjWA?autoplay=1" data-title="Latest edit">
+              <button class="play-btn" data-video="https://www.youtube.com/embed/B_BCCdWkjWA?autoplay=1" data-title="Comprehensive Motion Graphics Showcase">
                 <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
               </button>
             </div>
           </div>
           <div class="work-card__info">
-            <span class="work-card__cat">Motion graphics</span>
-            <h3 class="work-card__title">all things in one video</h3>
+            <span class="work-card__cat">Cinematic</span>
+            <h3 class="work-card__title">Motion Graphics Showcase</h3>
           </div>
         </div>
 
-        <!-- Card 6 -->
         <div class="work-card reveal" data-category="reels">
           <div class="work-card__thumb">
-            <iframe src="https://www.youtube.com/embed/es2IdQmnc6U?rel=0" title="Reel 02" allowfullscreen loading="lazy"></iframe>
+            <img src="https://img.youtube.com/vi/es2IdQmnc6U/maxresdefault.jpg" alt="Startup Reel" class="video-thumbnail" />
             <div class="work-card__overlay">
-              <button class="play-btn" data-video="https://www.youtube.com/embed/es2IdQmnc6U?autoplay=1" data-title="Instagram Reel – Startup">
+              <button class="play-btn" data-video="https://www.youtube.com/embed/es2IdQmnc6U?autoplay=1" data-title="Tech Startup Promotional Reel">
                 <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
               </button>
             </div>
           </div>
           <div class="work-card__info">
             <span class="work-card__cat">Reels</span>
-            <h3 class="work-card__title">Instagram Reel </h3>
+            <h3 class="work-card__title">Tech Startup Promotional Reel</h3>
           </div>
         </div>
 
-<!-- Card 7 -->
-        <div class="work-card reveal" data-category="Spiritual">
+        <div class="work-card reveal" data-category="spiritual">
           <div class="work-card__thumb">
-            <iframe src="https://www.youtube.com/embed/hAfe2YI0Fgs?rel=0" title="Cinematic 01" allowfullscreen loading="lazy"></iframe>
+            <img src="https://img.youtube.com/vi/hAfe2YI0Fgs/maxresdefault.jpg" alt="Dynamic Animation" class="video-thumbnail" />
             <div class="work-card__overlay">
-              <button class="play-btn" data-video="https://www.youtube.com/embed/hAfe2YI0Fgs?autoplay=1" data-title="Latest edit">
+              <button class="play-btn" data-video="https://www.youtube.com/embed/hAfe2YI0Fgs?autoplay=1" data-title="Dynamic Motion Graphics & Animation">
                 <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
               </button>
             </div>
           </div>
           <div class="work-card__info">
-            <span class="work-card__cat">ENglish REEL</span>
-            <h3 class="work-card__title">Motion graphics and animation</h3>
+            <span class="work-card__cat">Spiritual</span>
+            <h3 class="work-card__title">Dynamic Motion Graphics</h3>
           </div>
         </div>
 
-
-         <!-- Card 8 -->
-        <div class="work-card reveal" data-category="reels">
+         <div class="work-card reveal" data-category="reels">
           <div class="work-card__thumb">
-            <iframe src="https://www.youtube.com/embed/dqPR-cNBLYk?rel=0" title="Reel 02" allowfullscreen loading="lazy"></iframe>
+            <img src="https://img.youtube.com/vi/dqPR-cNBLYk/maxresdefault.jpg" alt="Engaging Brand Reel" class="video-thumbnail" />
             <div class="work-card__overlay">
-              <button class="play-btn" data-video="https://www.youtube.com/embed/dqPR-cNBLYk?autoplay=1" data-title="Instagram Reel – Startup">
-                <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
-              </button>
-            </div>
-          </div>
-          <div class="work-card__info">
-            <span class="work-card__cat">Reels</span>
-            <h3 class="work-card__title">Instagram Reel </h3>
-          </div>
-        </div>
-
-         <!-- Card 9 -->
-        <div class="work-card reveal" data-category="reels">
-          <div class="work-card__thumb">
-            <iframe src="https://www.youtube.com/embed/LpgaTHWNnxA?rel=0" title="Reel 02" allowfullscreen loading="lazy"></iframe>
-            <div class="work-card__overlay">
-              <button class="play-btn" data-video="https://www.youtube.com/embed/LpgaTHWNnxA?autoplay=1" data-title="Instagram Reel – Startup">
+              <button class="play-btn" data-video="https://www.youtube.com/embed/dqPR-cNBLYk?autoplay=1" data-title="Engaging Brand Reel">
                 <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
               </button>
             </div>
           </div>
           <div class="work-card__info">
             <span class="work-card__cat">Reels</span>
-            <h3 class="work-card__title">Instagram Reel </h3>
+            <h3 class="work-card__title">Engaging Brand Reel</h3>
           </div>
         </div>
 
-      </div><!-- /work__grid -->
-    </div>
+         <div class="work-card reveal" data-category="reels">
+          <div class="work-card__thumb">
+            <img src="https://img.youtube.com/vi/LpgaTHWNnxA/maxresdefault.jpg" alt="High-Retention Edit" class="video-thumbnail" />
+            <div class="work-card__overlay">
+              <button class="play-btn" data-video="https://www.youtube.com/embed/LpgaTHWNnxA?autoplay=1" data-title="High-Retention Short Form Edit">
+                <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="work-card__info">
+            <span class="work-card__cat">Reels</span>
+            <h3 class="work-card__title">High-Retention Short Form Edit</h3>
+          </div>
+        </div>
 
-    
+      </div></div>
   </section>
 <!-- ═══════════════════════ TEJGYAN INSTAGRAM SPOTLIGHT ═══════════════════════ -->
   <section id="teejgyan-spotlight" class="section teejgyan-section">

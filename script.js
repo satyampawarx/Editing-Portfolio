@@ -167,6 +167,9 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ══════════════════════════════════════════════
      6. PORTFOLIO FILTER
   ══════════════════════════════════════════════ */
+  /* ══════════════════════════════════════════════
+     6. PORTFOLIO FILTER
+  ══════════════════════════════════════════════ */
   const filterBtns  = document.querySelectorAll('.filter-btn');
   const workCards   = document.querySelectorAll('.work-card');
 
@@ -176,14 +179,17 @@ document.addEventListener('DOMContentLoaded', () => {
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
-      const filter = btn.dataset.filter;
+      // Convert to lowercase to avoid case-sensitivity issues
+      const filter = btn.dataset.filter.toLowerCase();
 
       workCards.forEach(card => {
-        const cat = card.dataset.category;
+        const cat = card.dataset.category.toLowerCase();
         const show = filter === 'all' || cat === filter;
 
         if (show) {
           card.classList.remove('hidden');
+          card.style.animation = 'none'; // reset animation
+          card.offsetHeight; /* trigger reflow */
           card.style.animation = 'fadeIn 0.4s ease forwards';
         } else {
           card.classList.add('hidden');
@@ -191,8 +197,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
-
-
   /* ══════════════════════════════════════════════
      7. VIDEO MODAL (Lightbox)
   ══════════════════════════════════════════════ */
